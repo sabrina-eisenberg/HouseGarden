@@ -1,0 +1,52 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  canvas{
+    display: block;
+  }
+  
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: ('href='); 
+    margin: 0;
+    cursor: pointer;
+  }
+  
+  .flower {
+    position: flex;
+    align-items: center;
+    width: 200px;
+    height: 200px;
+  }
+  
+  .petal {
+    position: absolute;
+    width: 60px;
+    height: 100px;
+    background: pink;
+    border-radius: 50% 50% 0 0;
+    transform-origin: bottom center;
+    transition: all 0.3s ease;
+  }
+  
+
+  .click-marker {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(255, 199, 13, 0.987);
+    border-radius: 50%;
+    box-shadow: inset;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+  }
+
+  script{
+    z-index: 20;
+  }
