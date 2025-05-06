@@ -25,7 +25,7 @@ function draw() {
     lastY = mouseY;
     colorMode("hsl")
     strokeWeight(0);
-    let c = color(Math.round(Math.random() * 360), 100, 50);
+    let c = color(Math.round(Math.random() * 360), 90, 70);
     fill(c);
     rect(mouseX, mouseY, 8, 2);
   }
