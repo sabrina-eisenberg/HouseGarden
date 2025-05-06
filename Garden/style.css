@@ -2,10 +2,11 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    cursor: pointer;
   }
 
   canvas{
-    display: block;
+    display:flex;
   }
   
   body {
@@ -15,18 +16,19 @@
     height: 100vh;
     background: ('href='); 
     margin: 0;
-    cursor: pointer;
   }
   
   .flower {
     position: flex;
-    align-items: center;
+    justify-content: center;
     width: 200px;
     height: 200px;
   }
   
   .petal {
     position: absolute;
+    align-items: center;
+    justify-content: center;
     width: 60px;
     height: 100px;
     background: pink;
@@ -47,6 +49,6 @@
     pointer-events: none;
   }
 
-  script{
+  /* script{
     z-index: 20;
-  }
+  } */
