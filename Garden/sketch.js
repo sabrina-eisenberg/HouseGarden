@@ -9,25 +9,37 @@ function preload() {
   ]
 }
 
+let poses = [];
+
 function setup() {
   createCanvas(window.innerWidth, window.innerHeight);
-  background(255);
-  lastX = mouseX;
-  lastY = mouseY;
+  // background(150);
+  // lastX = mouseX;
+  // lastY = mouseY;
 }
 
-let lastX = 0;
-let lastY = 0;
+// let lastX = 0;
+// let lastY = 0;
 function draw() {
-  if (mouseX == lastX && mouseY == lastY) {
-  } else {
-    lastX = mouseX;
-    lastY = mouseY;
-    colorMode("hsl")
-    strokeWeight(0);
-    let c = color(Math.round(Math.random() * 360), 90, 70);
-    fill(c);
-    rect(mouseX, mouseY, 8, 2);
+    background("rgba(255, 255, 255, 0.32)")
+    // background(image(/images/green.jpg))
+  // if (mouseX == lastX && mouseY == lastY) {
+  //   } else {
+  //     lastX = mouseX;
+  //     lastY = mouseY;
+      colorMode("hsl")
+      strokeWeight(0);
+      let c = color(Math.round(Math.random() * 360), 90, 70);
+      fill(c,  64);
+      ellipse(mouseX, mouseY, 10, 10);
+      poses.push({x : mouseX, y : mouseY, color : c});
+      if(poses.length> 60) poses.shift();
+      for(let p = 0; p < poses.length; p++) {
+        // 
+        let pos = poses[p];
+        pos.color.setAlpha(p / 50)
+        fill(pos.color)
+        ellipse(pos.x, pos.y, 6, 6)
   }
 }
 
