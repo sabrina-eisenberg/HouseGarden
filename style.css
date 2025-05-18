@@ -1,0 +1,19 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+  }
+
+  .firstImg {
+    z-index: 10;
+  }
+
+.top:hover{
+    display: none;
+}
