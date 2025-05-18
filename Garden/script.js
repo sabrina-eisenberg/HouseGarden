@@ -1,5 +1,6 @@
 const flower = document.getElementById('flower');
-const numPetals = 8;
+const numPetals = Math.random()*12;
+let petalCount = Math.random()*12;
 
 // function randomColor() {
 //   const r = Math.floor(Math.random() * 255);
@@ -78,7 +79,7 @@ function createPetal(angle, baseColor) {
 }
 
 
-function createFlower(petalCount = NUM_PETALS) {
+function createFlower(petalCount = numPetals) {
   const flower = document.createElement('div');
   flower.classList.add('flower');
 
