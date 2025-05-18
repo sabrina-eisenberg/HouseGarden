@@ -43,13 +43,13 @@ function draw() {
   if (dots.length > 60) dots.shift();
 
 
-  if (dotsStay.length > 100) {
-    document.location.href = "../"
-    // img= saveCanvas(img, 'myImage.jpg');
-    // save(img, 'myImage.png');
-
+  if (dotsStay.length > 498 && !saving) {
+    noLoop(); 
+    saving = true; // prevents repeat triggers
+    saveTrailAsImageAndRedirect();
   }
-  document.getElementById("pathCount").innerHTML = dotsStay.length;
+
+  document.getElementById("pathCount").innerHTML = 500 - dotsStay.length;
 
   // draw the trail 
   for (let p = 0; p < dots.length; p++) {
@@ -77,3 +77,26 @@ addEventListener("click", (event) => {
 // pathButton = document.querySelector('#savePath')
 // onclick.pathButton(clear())
 // })
+
+let saving = false;
+
+function saveTrailAsImageAndRedirect() {
+  let pg = createGraphics(width, height);
+  pg.colorMode(HSL);
+  pg.noStroke();
+  pg.background(255); // white background
+
+  for (let p = 0; p < dotsStay.length; p++) {
+    let pos = dotsStay[p];
+    let col = pos.color;
+    col.setAlpha(1);
+    pg.fill(col);
+    pg.ellipse(pos.x, pos.y, 10, 10);
+  }
+
+  save(pg, 'bee.trail.jpg');
+
+  setTimeout(() => {
+    document.location.href = "../";
+  }, 1000); // 1 second delay
+}
