@@ -38,18 +38,18 @@ function draw() {
     lastX = mouseX;
     lastY = mouseY;
     dots.push({ x: mouseX, y: mouseY, color: c });
-    dotsStay.push({x: mouseX, y: mouseY, color: c });
+    dotsStay.push({ x: mouseX, y: mouseY, color: c });
   }
   if (dots.length > 60) dots.shift();
 
 
-if(dotsStay.length > 100) {
-  document.location.href="../"
-  // img= saveCanvas(img, 'myImage.jpg');
-  // save(img, 'myImage.png');
-  
-}
-document.getElementById("pathCount").innerHTML = dotsStay.length;
+  if (dotsStay.length > 100) {
+    document.location.href = "../"
+    // img= saveCanvas(img, 'myImage.jpg');
+    // save(img, 'myImage.png');
+
+  }
+  document.getElementById("pathCount").innerHTML = dotsStay.length;
 
   // draw the trail 
   for (let p = 0; p < dots.length; p++) {
@@ -57,7 +57,7 @@ document.getElementById("pathCount").innerHTML = dotsStay.length;
     pos.color.setAlpha(p / 50)
     fill(pos.color)
     ellipse(pos.x, pos.y, 10, 10)
-    
+
     // let pathButton = document.querySelector('#savePath')
     // pathButton.addEventListener("click", path(){
     // })
