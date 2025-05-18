@@ -44,7 +44,7 @@ function draw() {
 
 
 if(dotsStay.length > 100) {
-  document.location.href="/index.html"
+  document.location.href="../"
   // img= saveCanvas(img, 'myImage.jpg');
   // save(img, 'myImage.png');
   
