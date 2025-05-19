@@ -43,6 +43,7 @@ let petalCount = Math.random()*12;
 //   }
 // }
 
+
 function randomColor() {
   return `hsl(${Math.floor(Math.random() * 360)}, 80%, 70%)`;
 }
@@ -121,3 +122,4 @@ document.addEventListener('click', (event) => {
 });
 
 drawFlower(window.innerWidth / 2, window.innerHeight / 2);
+

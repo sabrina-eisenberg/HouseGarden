@@ -18,13 +18,9 @@ transform: translate(-50%, -50%);
 
 .top{
     z-index: 10;
-    opacity: 1;
     transition: opacity 0.5s ease;
 }
 
-.top:hover{
-opacity: 0;
-}
 
 .bottom{
     z-index: 5;

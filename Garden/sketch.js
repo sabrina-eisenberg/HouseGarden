@@ -9,6 +9,7 @@ function preload() {
   ]
 }
 
+
 let dots = [];
 
 let dotsStay = []
@@ -100,3 +101,4 @@ function saveTrailAsImageAndRedirect() {
     document.location.href = "../";
   }, 1000); // 1 second delay
 }
+

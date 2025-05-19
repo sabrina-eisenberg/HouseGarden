@@ -2,23 +2,12 @@ let dots = [];
 let dotsStay = [];
 let lastX = 0;
 let lastY = 0;
-let useColor = false;
+let useColor = true;
 
 function setup() {
   createCanvas(window.innerWidth, window.innerHeight);
   noStroke();
   colorMode(HSL);
-
-  // Attach hover events directly (p5 ensures DOM is ready)
-  const topImage = document.querySelector(".top");
-  if (topImage) {
-    topImage.addEventListener("mouseenter", () => {
-      useColor = true;
-    });
-    topImage.addEventListener("mouseleave", () => {
-      useColor = false;
-    });
-  }
 }
 
 function draw() {
@@ -26,8 +15,7 @@ function draw() {
   colorMode(HSL)
 
   let c = useColor
-    ? color(random(360), 90, 70)  
-    : color(10, 20, 30);            
+    color(random(360), 90, 70)             
 
   if (mouseX === lastX && mouseY === lastY) {
     if (random() < 0.4) dots.shift();
@@ -51,6 +39,6 @@ function draw() {
   }
 }
 
-document.getElementById("clickableImage").addEventListener("click", () => {
-    const text = document.getElementById("imageText");
-  });
+setTimeout(() => {
+  window.location.href = "../Garden/index.html"; 
+}, 5000);
