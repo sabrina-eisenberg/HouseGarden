@@ -20,8 +20,7 @@
   body {
     display: flex;
     justify-content: center;
-    align-items: center;
-    background: ; 
+    align-items: center; 
     margin: 0;
     cursor: url(images/bee!.webp) 0 0 , pointer;
   }

@@ -27,7 +27,7 @@ transform: translate(-50%, -50%);
 }
 
 canvas{
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     pointer-events: none;
@@ -38,4 +38,12 @@ canvas{
     z-index: 2;
     position: absolute;
     top: 5px;
+}
+
+.bee {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  pointer-events: none;
+  z-index: 20;
 }
